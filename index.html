@@ -9,7 +9,7 @@
         <button onclick="day(2)">Day 2</button>
         <button onclick="day(3)">Day 3</button>
         <h1 id="exname">none</h1>
-        <img id ="photo" src="" width="300px">
+        <img id ="photo" src="" width="300px" height="170">
         <p id="rep">none</p>
         <button onclick="exchange()">Previous</button>
         <button onclick="exchange(1)" id="next">Next</button>
@@ -21,18 +21,21 @@
     const link = ["https://thumbs.gfycat.com/LonelyEmbarrassedFossa-size_restricted.gif",
                 "https://flabfix.com/wp-content/uploads/2019/06/Glute-Bridges.gif",
                 "https://thumbs.gfycat.com/MeanMindlessHylaeosaurus-size_restricted.gif",
-                "",
+                "loading.gif",
                 "https://thumbs.gfycat.com/UnfinishedBreakableBooby-size_restricted.gif",
                 "https://thumbs.gfycat.com/KaleidoscopicYoungEmeraldtreeskink-size_restricted.gif",
+                "loading.gif"
             ]
     reps = "4*6"
     i = -1
     exchange(1)
 
     function exchange(adors) {
+        document.getElementById("photo").src = "loading.gif"
         if(adors){
             if(i <= exercises.length - 1){
                 i = i + 1
+                document.getElementById("next").innerHTML = "Next"
                 document.getElementById("title").innerHTML = exercises[i]
                 document.getElementById("exname").innerHTML = exercises[i]
                 document.getElementById("photo").src = link[i]
