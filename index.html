@@ -1,5 +1,8 @@
 <html>
-    <head><title id="title">none</title></head>
+    <head>
+        <title id="title">none</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
     <body style="text-align: center;">
         <button onclick="day(1)">Day 1</button>
         <button onclick="day(2)">Day 2</button>
@@ -7,12 +10,13 @@
         <h1 id="exname">none</h1>
         <img id ="photo" src="" width="300px">
         <p id="rep">none</p>
-        <button onclick="exchange()">OK!</button>
+        <button onclick="exchange()">Previous</button>
+        <button onclick="exchange()" id="next">Next</button>
     </body>
 </html>
 
 <script>
-    const exercises = ["Lateral Lunge" , "Glute bridge", "Lateral Bound" , "Medicine Ball<br>Squat to Overhead Press" , "Goblet Squat" , "Alternating Dumbbell Press"]
+    const exercises = ["Lateral Lunge" , "Glute bridge", "Lateral Bound" , "Medicine BallSquat to Overhead Press" , "Goblet Squat" , "Alternating Dumbbell Press"]
     const link = ["https://thumbs.gfycat.com/LonelyEmbarrassedFossa-size_restricted.gif",
                 "https://flabfix.com/wp-content/uploads/2019/06/Glute-Bridges.gif",
                 "https://thumbs.gfycat.com/MeanMindlessHylaeosaurus-size_restricted.gif",
@@ -25,17 +29,23 @@
     exchange()
 
     function exchange() {
-        if(i <= exercises.length - 2){
+        if(i <= exercises.length - 1){
             i = i + 1
+            document.getElementById("title").innerHTML = exercises[i]
             document.getElementById("exname").innerHTML = exercises[i]
             document.getElementById("photo").src = link[i]
             document.getElementById("rep").innerHTML = reps
         }
+        if(i == 6){
+            document.getElementById("title").innerHTML = "Congratulations"
+            document.getElementById("exname").innerHTML = "Congratulations"
+            document.getElementById("next").innerHTML = "Finish!"
+        }
+        console.log(i)
     }
 
     function day(number){
         reps = ["4*6","3*10","4*8"][number - 1]
-        console.log(reps)
         i = -1
         exchange()
     }
