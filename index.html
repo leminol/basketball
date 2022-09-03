@@ -5,59 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="text-align: center;">
-        <button onclick="day(1)">Day 1</button>
-        <button onclick="day(2)">Day 2</button>
-        <button onclick="day(3)">Day 3</button>
+        <button onclick="day(1, 0)">Day 1</button>
+        <button onclick="day(2, 0)">Day 2</button>
+        <button onclick="day(3, 0)">Day 3</button>
+        <button onclick="day(1, 1)">Barber Pole</button>
         <h1 id="exname">none</h1>
         <img id ="photo" src="" width="300px" height="170" src="loading.gif">
         <p id="rep">none</p>
-        <button onclick="exchange()">Previous</button>
+
+        <button onclick="exchange()" id="prev">Previous</button>
         <button onclick="exchange(1)" id="next">Next</button>
     </body>
 </html>
 
-<script>
-    const exercises = ["Lateral Lunge" , "Glute bridge", "Lateral Bound" , "Medicine BallSquat to Overhead Press" , "Goblet Squat" , "Alternating Dumbbell Press"]
-    const link = ["https://thumbs.gfycat.com/LonelyEmbarrassedFossa-size_restricted.gif",
-                "https://flabfix.com/wp-content/uploads/2019/06/Glute-Bridges.gif",
-                "https://thumbs.gfycat.com/MeanMindlessHylaeosaurus-size_restricted.gif",
-                "loading.gif",
-                "https://thumbs.gfycat.com/UnfinishedBreakableBooby-size_restricted.gif",
-                "https://thumbs.gfycat.com/KaleidoscopicYoungEmeraldtreeskink-size_restricted.gif",
-                "loading.gif"
-            ]
-    reps = "4*6"
-    i = -1
-    exchange(1)
-
-    function exchange(adors) {
-        document.getElementById("photo").src = "loading.gif"
-        if(adors){
-            if(i <= exercises.length - 1){
-                i = i + 1
-                document.getElementById("next").innerHTML = "Next"
-                document.getElementById("title").innerHTML = exercises[i]
-                document.getElementById("exname").innerHTML = exercises[i]
-                document.getElementById("photo").src = link[i]
-                document.getElementById("rep").innerHTML = reps
-            }
-            if(i == 5){document.getElementById("next").innerHTML = "Finish!"}
-            if(i == 6){
-                document.getElementById("title").innerHTML = "Congratulations"
-                document.getElementById("exname").innerHTML = "Congratulations"
-                
-            }
-        }
-        else if(i > 0){
-            i = i - 2
-            exchange(1)
-        }
-        console.log(i)
-    }
-
-    function day(number){
-        reps = ["4*6","3*10","4*8"][number - 1]
-        i = -1
-        exchange()
-    }
-</script>
+<script src="main.js"></script>
