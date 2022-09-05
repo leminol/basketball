@@ -61,7 +61,7 @@ function exdrill(number){
     document.getElementById("title").innerHTML = drills[number - 1]
     document.getElementById("exname").innerHTML = drills[number - 1]
     document.getElementById("photo").innerHTML = drills[number - 1]
-    document.getElementById("rep").innerHTML = "2 min."
+    document.getElementById("rep").innerHTML = "2*2 min."
     document.getElementById("photo").src = drillslink[i]
     
 }
