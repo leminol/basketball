@@ -8,8 +8,8 @@ const exerciseslink = ["https://thumbs.gfycat.com/LonelyEmbarrassedFossa-size_re
             "loading.gif"
         ]
 
-const drills = ["Barber Pole"]
-const drillslink = ["loading.gif"]
+const drills = ["Barber Pole", "Figure Eights & Catch Drill"]
+const drillslink = ["loading.gif", "loading.gif"]
 
 reps = "4*6"
 i = -1
@@ -62,5 +62,6 @@ function exdrill(number){
     document.getElementById("exname").innerHTML = drills[number - 1]
     document.getElementById("photo").innerHTML = drills[number - 1]
     document.getElementById("rep").innerHTML = "2 min."
+    document.getElementById("photo").src = drillslink[i]
     
 }

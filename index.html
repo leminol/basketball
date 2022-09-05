@@ -2,14 +2,21 @@
 <html>
     <head>
         <title id="title">none</title>
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="text-align: center;">
-        <button onclick="day(1, 0)">Day 1</button>
-        <button onclick="day(2, 0)">Day 2</button>
-        <button onclick="day(3, 0)">Day 3</button>
-        <button onclick="day(1, 1)">Barber Pole</button>
-        <h1 id="exname">none</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a onclick="day(1, 0)">Day 1</a>
+                <a onclick="day(2, 0)">Day 2</a>
+                <a onclick="day(3, 0)">Day 3</a>
+                <a onclick="day(1, 1)">Barber Pole</a>
+                <a onclick="day(2, 1)">Figure Eights & Catch Drill</a>
+            </div>
+        </div>
+            <h1 id="exname">none</h1>
         <img id ="photo" src="" width="300px" height="170" src="loading.gif">
         <p id="rep">none</p>
 
